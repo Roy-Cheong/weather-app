@@ -31,5 +31,16 @@ Built with Node.js, Express, and vanilla JS, with an emphasis on UI polish, dark
 
 ## 📸 Screenshots
 
-```html
-<img src="screenshots/forecast.png" width="500" alt="Weather Forecast Screenshot" />
+### 🔍 Forecast View
+<img src="screenshots/forecast.png" width="500" alt="Forecast UI" />
+
+### 🌗 Dark Mode
+<img src="screenshots/darkmode.png" width="500" alt="Dark Mode UI" />
+
+### ⭐ Favorites & Search History
+<img src="screenshots/favorites.png" width="500" alt="Favorites Section" />
+
+### 📈 Temperature Chart
+<img src="screenshots/chart.png" width="500" alt="Chart Visualization" />
+
+
