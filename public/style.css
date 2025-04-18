@@ -1,0 +1,237 @@
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    min-height: 100vh;
+    padding: 2rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  body.dark {
+    background: #0f172a;
+    color: #f1f5f9;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* === LAYOUT === */
+  .app {
+    max-width: 960px;
+    margin: auto;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  
+  .toggles {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  
+  .search-bar {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+  }
+  
+  .search-bar button {
+    padding: 0.75rem 1.25rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .search-bar button:hover {
+    background-color: #1e40af;
+  }
+  
+  /* === CARD SECTIONS === */
+  .card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    transition: background 0.3s ease;
+  }
+  
+  body.dark .card {
+    background: #1e293b;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #e2e8f0;
+    margin-bottom: 6px;
+    transition: background 0.2s ease;
+  }
+  
+  ul li:hover {
+    background: #cbd5e1;
+  }
+  
+  body.dark ul li {
+    background: #334155;
+    color: #f1f5f9;
+  }
+  
+  body.dark ul li:hover {
+    background: #475569;
+  }
+  
+  /* === TOGGLES === */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.3s;
+  }
+  
+  .slider:before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2563eb;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(18px);
+  }
+  
+  /* === CHART === */
+  canvas {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  /* === WEATHER STAR === */
+  .fav-star {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    transition: transform 0.2s;
+  }
+  
+  .fav-star:hover {
+    transform: scale(1.2);
+  }
+  
+  .weather-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .city-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  #weatherResult p {
+    margin-bottom: 12px;
+  }
+
+  #weatherResult h3 {
+    margin-bottom: 12px;
+  }
+  
+  .forecast-list {
+    margin-top: 0;
+  }
+  
+  ul li:hover {
+    background: #cbd5e1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+  }
+  
+  body.dark ul li:hover {
+    background: #475569;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.4s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  

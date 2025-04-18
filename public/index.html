@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roy's Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🌦 Roy's Weather Dashboard</h1>
+      <div class="toggles">
+        <div class="toggle">
+            <label class="switch">
+              <input type="checkbox" id="darkModeToggle" title="Toggle dark/light mode" />
+              <span class="slider"></span>
+            </label>
+            <span id="modeLabel">🌞 Light Mode</span>
+          </div>
+          <div class="toggle">
+            <label class="switch">
+              <input type="checkbox" id="unitToggle" title="Switch between °C and °F" />
+              <span class="slider"></span>
+            </label>
+            <span id="unitLabel">°C</span>
+          </div>
+          
+      </div>
+    </header>
+
+    <div class="search-bar">
+      <input type="text" id="cityInput" placeholder="Enter a city..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="weatherResult" class="card"></div>
+    <canvas id="weatherChart"></canvas>
+
+    <div class="grid">
+      <div class="card" id="searchHistoryContainer">
+        <h2>📌 Search History</h2>
+        <ul id="historyList"></ul>
+      </div>
+      <div class="card" id="favoriteCitiesContainer">
+        <h2>⭐ Favorite Cities</h2>
+        <ul id="favoriteList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
